@@ -45,6 +45,11 @@ public class frm_cliente extends javax.swing.JFrame {
         txt_nacimiento = new javax.swing.JTextField();
         aceptar_btn = new javax.swing.JButton();
         btnModificar = new javax.swing.JButton();
+        btnModificarNombre = new javax.swing.JButton();
+        btnModificarApellidos = new javax.swing.JButton();
+        btnModificarDireccion = new javax.swing.JButton();
+        btnModificarTelefono = new javax.swing.JButton();
+        btnModificarNacimiento = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,10 +72,45 @@ public class frm_cliente extends javax.swing.JFrame {
             }
         });
 
-        btnModificar.setText("Modificar Datos");
+        btnModificar.setText("Modificar");
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModificarActionPerformed(evt);
+            }
+        });
+
+        btnModificarNombre.setText("Modificar");
+        btnModificarNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarNombreActionPerformed(evt);
+            }
+        });
+
+        btnModificarApellidos.setText("Modificar");
+        btnModificarApellidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarApellidosActionPerformed(evt);
+            }
+        });
+
+        btnModificarDireccion.setText("Modificar");
+        btnModificarDireccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarDireccionActionPerformed(evt);
+            }
+        });
+
+        btnModificarTelefono.setText("Modificar");
+        btnModificarTelefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarTelefonoActionPerformed(evt);
+            }
+        });
+
+        btnModificarNacimiento.setText("Modificar");
+        btnModificarNacimiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarNacimientoActionPerformed(evt);
             }
         });
 
@@ -81,34 +121,45 @@ public class frm_cliente extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(nit_label)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_nit, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(nombres_label)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(nit_label)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txt_nit, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(nombres_label)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnModificar)
+                            .addComponent(btnModificarNombre)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(apellidos_label)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txt_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(68, 68, 68)
-                        .addComponent(btnModificar))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnModificarApellidos))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(nacimiento_label)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txt_nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt_nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnModificarNacimiento))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(direccion_label)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txt_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnModificarDireccion))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(telefono_label)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txt_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(62, Short.MAX_VALUE))
+                        .addComponent(txt_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnModificarTelefono)))
+                .addContainerGap(120, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(aceptar_btn)
@@ -120,28 +171,33 @@ public class frm_cliente extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nit_label)
-                    .addComponent(txt_nit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_nit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnModificar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nombres_label)
-                    .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnModificarNombre))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(apellidos_label)
                     .addComponent(txt_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnModificar))
+                    .addComponent(btnModificarApellidos))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(direccion_label)
-                    .addComponent(txt_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnModificarDireccion))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(telefono_label)
-                    .addComponent(txt_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnModificarTelefono))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nacimiento_label)
-                    .addComponent(txt_nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnModificarNacimiento))
                 .addGap(37, 37, 37)
                 .addComponent(aceptar_btn)
                 .addContainerGap(54, Short.MAX_VALUE))
@@ -157,9 +213,39 @@ public class frm_cliente extends javax.swing.JFrame {
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         // TODO add your handling code here:
-        obj_cliente = new Cliente(txt_nit.getText(),txt_nombres.getText(),txt_apellidos.getText(),txt_telefono.getText(),txt_direccion.getText(),txt_nacimiento.getText());        
+        obj_cliente.setNit(txt_nit.getText());
         obj_cliente.agregar();
     }//GEN-LAST:event_btnModificarActionPerformed
+
+    private void btnModificarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNombreActionPerformed
+        // TODO add your handling code here:
+        obj_cliente.setNombres(txt_nombres.getText());
+        obj_cliente.agregar();
+    }//GEN-LAST:event_btnModificarNombreActionPerformed
+
+    private void btnModificarApellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarApellidosActionPerformed
+        // TODO add your handling code here:
+        obj_cliente.setApellidos(txt_apellidos.getText());
+        obj_cliente.agregar();
+    }//GEN-LAST:event_btnModificarApellidosActionPerformed
+
+    private void btnModificarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarDireccionActionPerformed
+        // TODO add your handling code here:
+        obj_cliente.setDireccion(txt_direccion.getText());
+        obj_cliente.agregar();
+    }//GEN-LAST:event_btnModificarDireccionActionPerformed
+
+    private void btnModificarTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarTelefonoActionPerformed
+        // TODO add your handling code here:
+        obj_cliente.setTelefono(txt_telefono.getText());
+        obj_cliente.agregar();
+    }//GEN-LAST:event_btnModificarTelefonoActionPerformed
+
+    private void btnModificarNacimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarNacimientoActionPerformed
+        // TODO add your handling code here:
+        obj_cliente.setF_nacimiento(txt_nacimiento.getText());
+        obj_cliente.agregar();
+    }//GEN-LAST:event_btnModificarNacimientoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,6 +286,11 @@ public class frm_cliente extends javax.swing.JFrame {
     private javax.swing.JButton aceptar_btn;
     private javax.swing.JLabel apellidos_label;
     private javax.swing.JButton btnModificar;
+    private javax.swing.JButton btnModificarApellidos;
+    private javax.swing.JButton btnModificarDireccion;
+    private javax.swing.JButton btnModificarNacimiento;
+    private javax.swing.JButton btnModificarNombre;
+    private javax.swing.JButton btnModificarTelefono;
     private javax.swing.JLabel direccion_label;
     private javax.swing.JLabel nacimiento_label;
     private javax.swing.JLabel nit_label;
